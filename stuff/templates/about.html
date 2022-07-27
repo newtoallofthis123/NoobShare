@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p class="heading">Your Stuff is Private.</p>
+<div class="text_div">
+	<p class="lead text">
+		And We respect that. So Share Your Stuff privately with NoobShare. NoobShare a flask powered project run on heroku and is the exclusive property of <a href="/author" class="des_link_1">NoobScience.</a>
+		Do You Know why NoobShare is private? Because Even though NoobShare uses a database which is connected to my heroku account, you can if you like host your own instance of ShareStuff, just read the <a href="/license" class="des_link_1">license</a> and continue.
+		There is absolutely no restrictions, but I am not responsible for the content hosted on NoobShare. 
+		And you know what the best part is? Your NoobShare is permanent. Unless a severe technical error should come by, your stuff is never deleted ever. So be careful while posting sensitive content to the website.
+		Always Use good passwords to protect your stuff. You also must need the password to use the get api. 
+	</p>
+</div>
+<div style="margin: 3%; border-radius: 12px; margin-top: 0px;">
+	<p class="sub_heading" id="api">Rich API for NOOBSHARE</p>
+	<textarea name="api_area" id="api_area" cols="30" rows="8">{{ code_content }}</textarea>
+</div>
+<div style="text-align: center; padding-bottom: 2%;">
+	<p class="heading" style="padding-top: 0px;">Important Links</p>
+	<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+		<button type="button" class="btn btn-danger"><a href="/license" class="btn_link">License</a></button>
+		<button type="button" class="btn btn-warning"><a href="/github" class="btn_link">GitHub</a></button>
+		<button type="button" class="btn btn-success"><a href="/" class="btn_link">Continue</a></button>
+	</div>
+</div>
+
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/edit/closebrackets.js"></script>
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/comment/comment.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css">
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/python/python.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/material.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/keymap/sublime.js"></script>
+<script>
+	const codemirrorEditor = CodeMirror.fromTextArea(document.getElementById('api_area'), {
+		lineNumbers: true,
+		mode: "python",
+		theme: "material",
+		keymap: "sublime",
+		autoCloseBrackets: true,
+		matchTags: {bothTags: true},
+		autoCloseTags: true,
+		styleActiveLine: true,
+		smartIndent: true,
+		cursorBlinkRate: 0,
+		cursorHeight: 1,
+		viewportMargin: Infinity,
+		readOnly: true,
+	});
+</script>
+
+{% endblock %}

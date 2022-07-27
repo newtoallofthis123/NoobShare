@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<p class="heading" style="padding-bottom: 0px">This Page is a Ghost</p>
+<div class="hero">
+	<img src="{{ url_for('static',filename='assets/images/404.png') }}" alt="404 Error" width="480">
+	<div class="text_div">
+		<p class="sub_heading">404 ERROR</p>
+		<p class="lead text">This Means that our databases have no account for this page. Please Check the hash and retry or if you think there was an error on our part, please feel free to <a href="https://newtoallofthis123.github.io/tree" class="des_link_1">Contact Us.</a></p>
+		<button class="btn btn-info"><a href="/" class="btn_link">Return Back</a></button>
+	</div>
+</div>
+<p class="lead" style="padding: 12px;">404 Courtesy <a href="https://www.kapwing.com/404-illustrations" class="des_link_1">Kapwing</a></p>
+
+{% endblock %}

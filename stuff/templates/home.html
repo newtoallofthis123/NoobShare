@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action="/done" method="POST" style="padding: 3%;">
+<!-- 	<input name="author" type="text">
+	<textarea name="content" id="content" cols="30" rows="10"></textarea>
+	<button type="submit">Send</button> -->
+	<div class="mb-3">
+	  	<label for="AuthorInput" class="form-label lead text"><i class="bi bi-person"></i> Author Name: Must Be Fake 😉</label>
+	  	<input type="text" name="author" id="author" required class="form-control" id="AuthorInput" placeholder="Enter Your Name">
+	</div>
+	<div class="mb-3">
+	  	<label for="PasswordInput" class="form-label lead text"><i class="bi bi-shield-lock"></i> Enter Password : Must Be Safe 😉</label>
+	  	<input type="text" name="password" id="password" required class="form-control" id="PasswordInput" placeholder="Enter Your Password">
+	</div>
+	<div class="mb-3">
+	  	<label for="content" class="form-label lead text"><i class="bi bi-paragraph"></i> Enter The Good Stuff</label>
+	  	<textarea class="form-control" spellcheck="true" required name="content" id="content" rows="12"></textarea>
+	</div>
+	<div class="d-grid gap-2">
+	  	<button type="submit" class="btn btn-success" type="button"><span style="font-size: 18px; color: #f0f0f0; padding: 12px;">Continue To ShareStuff <i class="bi bi-arrow-right"></i></span></button>
+	</div>
+</form>
+
+{% endblock %}
